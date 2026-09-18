@@ -40,6 +40,30 @@ if (reflectionLayer && !prefersReducedMotion) {
   }
 }
 
+const danceFloor = document.querySelector("[data-dance-floor]");
+if (danceFloor) {
+  const floorTones = ["gold", "rose", "blue", "cream"];
+
+  for (let index = 0; index < 72; index += 1) {
+    const tile = document.createElement("span");
+    tile.className = `floor-tile floor-tile-${floorTones[index % floorTones.length]}`;
+    tile.style.setProperty("--tile-index", index);
+    danceFloor.appendChild(tile);
+  }
+}
+
+const equalizer = document.querySelector("[data-equalizer]");
+if (equalizer) {
+  const barHeights = [38, 66, 48, 82, 58, 92, 52, 74, 44, 88, 62, 96, 54, 78, 42, 70, 50, 84, 46, 64, 36];
+
+  barHeights.forEach((height, index) => {
+    const bar = document.createElement("span");
+    bar.style.setProperty("--bar-height", `${height}%`);
+    bar.style.setProperty("--bar-delay", `${index * -0.08}s`);
+    equalizer.appendChild(bar);
+  });
+}
+
 if (!prefersReducedMotion) {
   window.addEventListener("pointermove", (event) => {
     document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);

@@ -47,11 +47,6 @@
             <div class="disco-aura"></div>
             <img src="./assets/disco-ball.png" width="1024" height="1024" alt="" />
           </div>
-          <div class="dj-light-rig">
-            <span class="fixture-beam"></span>
-            <span class="fixture-flare"></span>
-            <img src="./assets/dj-moving-light.png" width="1024" height="1024" alt="" />
-          </div>
           <div class="disco-reflections"></div>
         </div>
 
@@ -165,14 +160,18 @@
 
       <section class="party-section" id="party" aria-labelledby="party-title">
         <div class="party-scene reveal">
-          <img
-            src="./assets/dance-floor.png"
-            width="1672"
-            height="941"
-            loading="lazy"
-            alt="Elegant reception dance floor with a DJ booth, disco ball, champagne tower and cocktail lounge"
-          />
-          <div class="party-scene-glow" aria-hidden="true"></div>
+          <div class="vector-stage" aria-hidden="true">
+            <div class="stage-rays">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="stage-orb"><i></i></div>
+            <div class="equalizer" data-equalizer></div>
+            <div class="floor-horizon"></div>
+            <div class="vector-floor">
+              <div class="floor-grid" data-dance-floor></div>
+            </div>
+            <div class="floor-reflection"></div>
+          </div>
           <p class="party-caption"><span>25.09.26</span> The floor is yours</p>
         </div>
         <div class="party-copy reveal">
