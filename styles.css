@@ -663,6 +663,14 @@ body.is-loaded .hero-reveal {
   line-height: 0.85;
 }
 
+.countdown-live {
+  margin: 0;
+  color: var(--gold-bright);
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  line-height: 1;
+}
+
 .details,
 .experience,
 .invitation-section {
@@ -742,6 +750,27 @@ h2 em {
 .detail-card small {
   color: rgba(203, 190, 181, 0.68);
   font-size: 0.82rem;
+}
+
+.location-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: max-content;
+  margin-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(233, 197, 122, 0.55);
+  color: var(--gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.location-link:hover,
+.location-link:focus-visible {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
 }
 
 .experience {
@@ -950,6 +979,10 @@ h2 em {
   transform: translateY(-0.2rem);
 }
 
+.party-items article:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .party-items span {
   color: var(--rose);
   font-size: 0.72rem;
@@ -1030,6 +1063,20 @@ h2 em {
   letter-spacing: 0.12em;
   line-height: 1.8;
   text-transform: uppercase;
+}
+
+.inline-location {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(233, 197, 122, 0.5);
+  text-underline-offset: 0.35rem;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+.inline-location:hover,
+.inline-location:focus-visible {
+  color: var(--gold-bright);
+  text-decoration-color: currentColor;
 }
 
 .fine-rule {

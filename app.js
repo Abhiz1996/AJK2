@@ -90,12 +90,22 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
 }
 
 const countdown = document.querySelector("[data-countdown]");
-const eventTime = new Date("2026-09-25T19:00:00+05:30").getTime();
+const countdownLabel = document.querySelector("[data-countdown-label]");
+const eventTime = Date.UTC(2026, 8, 25, 13, 30, 0);
+let countdownTimer = null;
 
 function updateCountdown() {
   if (!countdown) return;
 
-  const remaining = Math.max(0, eventTime - Date.now());
+  const remaining = eventTime - Date.now();
+
+  if (remaining <= 0) {
+    if (countdownLabel) countdownLabel.textContent = "The celebration is underway";
+    countdown.innerHTML = '<p class="countdown-live">Tonight · 7 PM onwards</p>';
+    if (countdownTimer) window.clearInterval(countdownTimer);
+    return;
+  }
+
   const days = Math.floor(remaining / 86400000);
   const hours = Math.floor((remaining % 86400000) / 3600000);
   const minutes = Math.floor((remaining % 3600000) / 60000);
@@ -108,4 +118,4 @@ function updateCountdown() {
 }
 
 updateCountdown();
-window.setInterval(updateCountdown, 1000);
+countdownTimer = window.setInterval(updateCountdown, 1000);
