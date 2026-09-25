@@ -616,61 +616,6 @@ body.is-loaded .hero-reveal {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.countdown-section {
-  position: relative;
-  z-index: 1;
-  padding: 6rem clamp(1.25rem, 6vw, 7rem);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  text-align: center;
-}
-
-.countdown {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: clamp(0.65rem, 3vw, 3rem);
-}
-
-.countdown div {
-  min-width: clamp(4rem, 10vw, 8rem);
-}
-
-.countdown strong {
-  display: block;
-  color: var(--gold-bright);
-  font-family: var(--serif);
-  font-size: clamp(2.5rem, 7vw, 6rem);
-  font-weight: 400;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.countdown span {
-  display: block;
-  margin-top: 0.7rem;
-  color: var(--muted);
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.countdown b {
-  color: var(--rose);
-  font-family: var(--serif);
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  font-weight: 400;
-  line-height: 0.85;
-}
-
-.countdown-live {
-  margin: 0;
-  color: var(--gold-bright);
-  font-family: var(--serif);
-  font-size: clamp(2.4rem, 6vw, 5.5rem);
-  line-height: 1;
-}
-
 .details,
 .experience,
 .invitation-section {
@@ -1244,23 +1189,6 @@ footer span {
   .hero-actions {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .countdown {
-    gap: 0.35rem;
-  }
-
-  .countdown div {
-    min-width: 3.4rem;
-  }
-
-  .countdown span {
-    font-size: 0.52rem;
-    letter-spacing: 0.1em;
-  }
-
-  .countdown b {
-    font-size: 1.7rem;
   }
 
   .detail-grid {
