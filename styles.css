@@ -1196,23 +1196,44 @@ footer span {
 
 @media (max-width: 680px) {
   .site-header {
-    padding-top: 1.25rem;
+    padding: 1.1rem 1rem;
+  }
+
+  .monogram {
+    flex: 0 0 auto;
+    font-size: 1rem;
   }
 
   nav {
-    gap: 1.25rem;
+    gap: clamp(0.65rem, 3vw, 0.9rem);
   }
 
   nav a {
-    font-size: 0.64rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
   }
 
   .hero {
-    padding-top: 7.5rem;
+    gap: 3rem;
+    padding: 7rem 1.125rem 4rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 1.1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
   }
 
   h1 {
     line-height: 0.76;
+  }
+
+  h1 span {
+    font-size: clamp(3.5rem, 18vw, 5.6rem);
+  }
+
+  h1 span:last-child {
+    margin-left: clamp(1.6rem, 10vw, 3.4rem);
   }
 
   h1 small {
@@ -1221,25 +1242,57 @@ footer span {
   }
 
   .full-names {
-    max-width: 18rem;
+    max-width: 20rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
 
+  .hero-note {
+    max-width: 19rem;
+    font-size: 1.12rem;
+    line-height: 1.45;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 1.75rem;
+  }
+
+  .button {
+    width: min(100%, 20rem);
+  }
+
+  .hero-visual {
+    width: min(92vw, 30rem);
+  }
+
+  .countdown-section {
+    padding: 4rem 1rem;
+  }
+
   .countdown {
-    gap: 0.35rem;
+    gap: clamp(0.25rem, 1.5vw, 0.55rem);
   }
 
   .countdown div {
-    min-width: 3.4rem;
+    min-width: 0;
+    flex: 1 1 0;
+    max-width: 5rem;
+  }
+
+  .countdown strong {
+    font-size: clamp(2.15rem, 10vw, 3.25rem);
   }
 
   .countdown span {
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
   }
 
   .countdown b {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .disco-installation {
@@ -1258,29 +1311,76 @@ footer span {
     border-radius: 9rem 9rem 0.35rem 0.35rem;
   }
 
-  .hero-actions {
-    align-items: flex-start;
-    flex-direction: column;
+  .couple-card figcaption {
+    padding-bottom: 1rem;
+    font-size: 1.15rem;
+  }
+
+  .details,
+  .experience,
+  .invitation-section {
+    padding: 4.5rem 1.125rem;
+  }
+
+  .section-heading h2,
+  .experience h2,
+  .invitation-copy h2 {
+    font-size: clamp(2.7rem, 13vw, 4.25rem);
+    line-height: 0.92;
+    text-wrap: balance;
   }
 
   .detail-grid {
     grid-template-columns: 1fr;
+    margin-top: 2.75rem;
   }
 
   .detail-card {
-    min-height: 12.5rem;
+    min-height: 10.75rem;
+    grid-template-columns: 1.75rem 1fr;
+    gap: 1rem;
+    padding: 1.35rem;
+  }
+
+  .detail-card h3 {
+    font-size: clamp(2.3rem, 11vw, 3.35rem);
+  }
+
+  .detail-card p,
+  .detail-number {
+    font-size: 0.75rem;
+  }
+
+  .detail-card small {
+    font-size: 0.88rem;
+  }
+
+  .location-link {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .experience {
+    gap: 2.5rem;
   }
 
   .experience-item {
     grid-template-columns: 2rem 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
   }
 
   .experience-item p {
     grid-column: 2;
+    font-size: 1rem;
+  }
+
+  .experience-item span {
+    font-size: 0.75rem;
   }
 
   .party-scene {
-    min-height: 55svh;
+    min-height: clamp(22rem, 55svh, 34rem);
   }
 
   .vector-floor {
@@ -1290,33 +1390,112 @@ footer span {
   }
 
   .party-copy {
-    padding: 4.5rem 1.25rem;
+    padding: 4rem 1.125rem;
+  }
+
+  .party-copy h2 {
+    font-size: clamp(2.8rem, 13vw, 4.3rem);
+    line-height: 0.92;
+    text-wrap: balance;
+  }
+
+  .party-intro {
+    margin: 1.5rem 0 2rem;
+    font-size: 1.05rem;
   }
 
   .party-items article {
-    min-height: 8.6rem;
+    min-height: 8rem;
     padding: 1rem;
+  }
+
+  .party-items h3 {
+    margin-top: 0.9rem;
+    font-size: 1.4rem;
+  }
+
+  .party-items p {
+    font-size: 0.88rem;
   }
 
   .party-caption {
     right: 1rem;
     bottom: 1rem;
     left: 1rem;
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
   }
 
   .invitation-section {
     grid-template-columns: 1fr;
+    gap: 2.75rem;
   }
 
   .invitation-copy {
     order: -1;
   }
 
+  .fine-rule {
+    margin: 2rem 0;
+  }
+
+  .invitation-copy > p:not(.eyebrow):not(.invitation-date) {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  .invitation-date {
+    font-size: clamp(2.5rem, 14vw, 3.8rem);
+  }
+
+  .poster-wrap {
+    width: min(100%, 22rem);
+  }
+
   footer {
     gap: 0.7rem;
     flex-wrap: wrap;
+    padding: 1.75rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  nav {
+    gap: 0.6rem;
+  }
+
+  nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+
+  h1 span {
+    font-size: clamp(3.25rem, 17vw, 4.5rem);
+  }
+
+  .countdown b {
+    display: none;
+  }
+
+  .countdown {
+    gap: 0.5rem;
+  }
+
+  .countdown span {
+    font-size: 0.72rem;
+  }
+
+  .party-items {
+    grid-template-columns: 1fr;
+  }
+
+  .party-items article:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .party-items article {
+    min-height: 7.25rem;
   }
 }
 
